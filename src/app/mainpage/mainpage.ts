@@ -20,22 +20,22 @@ export class Mainpage {
 
   categories = [
     {
-      name: 'Thread Art',
+      name: 'Caps and Bows',
       detail: 'Thoughtful pieces, stitched by hand',
       image:
-        'https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=900&q=85',
+        'caps-bows.png',
     },
     {
       name: 'Personalised Gifts',
       detail: 'Made meaningful, made for them',
       image:
-        'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=900&q=85',
+        'personalisec-gifts.jpg',
     },
     {
       name: 'Custom Clothing',
       detail: 'Your idea, our little bit of magic',
       image:
-        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85',
+        'custom-clothing.png',
     },
   ];
 
