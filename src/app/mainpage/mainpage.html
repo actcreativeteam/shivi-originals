@@ -1,0 +1,206 @@
+<main class="min-h-screen overflow-hidden bg-[#fbf7ef] text-[#463326]">
+<!-- Announcement strip -->
+<div class="bg-[#66513d] px-4 py-2 text-center text-[10px] font-medium uppercase tracking-[0.22em] text-[#fffaf1] sm:text-xs">
+  Little details. Big meaning. Made by hand, just for you.
+</div>
+
+<!-- Navigation -->
+<header class="relative z-20 border-b border-[#e9dfd1] bg-[#fbf7ef]/95">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
+    <a href="#home" class="flex items-center" aria-label="Shivi home" (click)="closeMenu()">
+      <img src="assets/shivi-logo.png" alt="Shivi handmade crafts logo" class="h-16 w-16 object-contain sm:h-20 sm:w-20" />
+    </a>
+
+    <nav class="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.18em] text-[#6b5746] md:flex">
+      <a class="transition hover:text-[#b66f59]" href="#home">Home</a>
+      <a class="transition hover:text-[#b66f59]" href="#collections">Collections</a>
+      <a class="transition hover:text-[#b66f59]" href="#story">Our Story</a>
+      <a class="transition hover:text-[#b66f59]" href="#custom">Custom Orders</a>
+    </nav>
+
+    <a href="#contact" class="hidden rounded-full border border-[#8b6b50] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#5c4432] transition hover:bg-[#66513d] hover:text-white md:inline-flex">
+      Let’s create
+    </a>
+
+    <button type="button" class="rounded-full border border-[#d9cabb] p-2 md:hidden" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">
+      @if (!menuOpen) {
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      } @else {
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      }
+    </button>
+  </div>
+
+  @if (menuOpen) {
+    <nav class="absolute left-0 right-0 top-full flex flex-col gap-4 border-b border-[#e9dfd1] bg-[#fbf7ef] px-6 py-6 text-xs font-semibold uppercase tracking-[0.18em] shadow-lg md:hidden">
+      <a href="#home" (click)="closeMenu()">Home</a>
+      <a href="#collections" (click)="closeMenu()">Collections</a>
+      <a href="#story" (click)="closeMenu()">Our Story</a>
+      <a href="#custom" (click)="closeMenu()">Custom Orders</a>
+      <a href="#contact" (click)="closeMenu()">Contact</a>
+    </nav>
+  }
+</header>
+
+<!-- Hero -->
+<section id="home" class="relative">
+  <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-20 pt-14 sm:px-8 sm:pt-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:pb-28 lg:pt-24">
+    <div class="relative z-10 max-w-2xl">
+      <p class="mb-5 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#a36d57] sm:text-xs">
+        <span class="h-px w-9 bg-[#b77b63]"></span> Handmade with heart
+      </p>
+      <h1 class="font-serif text-5xl leading-[1.08] tracking-[-0.04em] text-[#493629] sm:text-6xl lg:text-7xl">
+        Made by hand.<br />
+        <span class="italic text-[#ad725d]">Made for you.</span>
+      </h1>
+      <p class="mt-7 max-w-lg text-sm leading-7 text-[#796858] sm:text-base sm:leading-8">
+        From delicate thread art to personalised gifts and one-of-a-kind outfits,
+        we turn your little ideas into keepsakes you’ll want to hold on to.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="#collections" class="rounded-full bg-[#66513d] px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-md shadow-[#66513d]/15 transition hover:-translate-y-0.5 hover:bg-[#4d3a2b]">
+          Explore collections <span class="ml-2">↗</span>
+        </a>
+        <a href="#custom" class="px-3 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#755a46] underline decoration-[#c7a38d] underline-offset-8 hover:text-[#ad725d]">
+          Create something custom
+        </a>
+      </div>
+      <div class="mt-14 flex items-center gap-4 border-t border-[#e5d9ca] pt-6">
+        <div class="flex -space-x-2">
+          <span class="grid h-9 w-9 place-items-center rounded-full border-2 border-[#fbf7ef] bg-[#dfb6a2] text-sm">✿</span>
+          <span class="grid h-9 w-9 place-items-center rounded-full border-2 border-[#fbf7ef] bg-[#c6c7a5] text-sm">✳</span>
+          <span class="grid h-9 w-9 place-items-center rounded-full border-2 border-[#fbf7ef] bg-[#e9d6b9] text-sm">♡</span>
+        </div>
+        <p class="text-xs leading-5 text-[#806e5e]">Every piece has a story.<br /><span class="font-semibold text-[#594332]">Yours is waiting to be made.</span></p>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-xl">
+      <div class="absolute -right-4 -top-5 h-28 w-28 rounded-full border border-[#d7b8a2] sm:-right-7 sm:-top-8 sm:h-40 sm:w-40"></div>
+      <div class="absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-[#e9dfd1]"></div>
+      <div class="relative overflow-hidden rounded-t-[48%] rounded-b-[46%] border-[10px] border-white/70 shadow-[0_25px_70px_rgba(91,66,45,0.13)]">
+        <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1200&q=90" alt="Creative handmade craft workspace" class="h-[390px] w-full object-cover sm:h-[520px]" />
+      </div>
+      <div class="absolute -bottom-5 right-0 rounded-2xl border border-[#eadfd2] bg-[#fffdf8] px-5 py-4 shadow-xl sm:-right-5">
+        <p class="font-serif text-xl italic text-[#a66d58]">A little more personal</p>
+        <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-[#887565]">Crafted with care</p>
+      </div>
+      <span class="absolute -left-5 top-1/3 text-4xl text-[#b78368]">✳</span>
+    </div>
+  </div>
+</section>
+
+<!-- Values band -->
+<section class="border-y border-[#e9dfd1] bg-[#f3ece1]">
+  <div class="mx-auto grid max-w-7xl gap-5 px-5 py-7 text-center sm:grid-cols-3 sm:px-8">
+    <div><p class="font-serif text-lg italic text-[#715640]">Made by hand</p><p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-[#988474]">Thoughtful details in every piece</p></div>
+    <div class="border-y border-[#dfd1c1] py-5 sm:border-x sm:border-y-0 sm:py-0"><p class="font-serif text-lg italic text-[#715640]">Made to order</p><p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-[#988474]">Your idea guides the design</p></div>
+    <div><p class="font-serif text-lg italic text-[#715640]">Made to be loved</p><p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-[#988474]">Keepsakes beyond the moment</p></div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section id="collections" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+  <div class="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+    <div>
+      <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#ad725d]">Explore what we make</p>
+      <h2 class="mt-3 font-serif text-4xl tracking-tight text-[#493629] sm:text-5xl">A world of little wonders</h2>
+    </div>
+    <p class="max-w-sm text-sm leading-7 text-[#806e5e]">Handmade details, thoughtful personal touches, and creative pieces that feel unmistakably yours.</p>
+  </div>
+  <div class="grid gap-6 md:grid-cols-3">
+    @for (item of categories; track item.name) {
+      <a href="#contact" class="group">
+        <div class="relative overflow-hidden rounded-[2rem] bg-[#e8ded0]">
+          <img [src]="item.image" [alt]="item.name" class="h-72 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-80" />
+          <span class="absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-[#fffaf1] text-lg text-[#755640] transition group-hover:rotate-45">↗</span>
+        </div>
+        <h3 class="mt-5 font-serif text-2xl text-[#503c2c]">{{ item.name }}</h3>
+        <p class="mt-1 text-xs tracking-wide text-[#927e6d]">{{ item.detail }}</p>
+      </a>
+    }
+  </div>
+</section>
+
+<!-- Featured products -->
+<section class="bg-[#f1e9dd] py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="mb-10 text-center">
+      <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#ad725d]">A few customer favourites</p>
+      <h2 class="mt-3 font-serif text-4xl text-[#493629] sm:text-5xl">Made with a little magic</h2>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      @for (product of products; track product.name) {
+        <article class="group overflow-hidden rounded-[1.6rem] bg-[#fffdf8] p-3 shadow-[0_12px_35px_rgba(91,66,45,0.06)]">
+          <div class="relative overflow-hidden rounded-[1.2rem] bg-[#e7ddd0]">
+            <img [src]="product.image" [alt]="product.name" class="h-72 w-full object-cover transition duration-700 group-hover:scale-105" />
+            @if (product.badge) {
+              <span class="absolute left-4 top-4 rounded-full bg-[#fffaf1] px-3 py-2 text-[9px] font-semibold tracking-[0.16em] text-[#8e614e]">{{ product.badge }}</span>
+            }
+          </div>
+          <div class="flex items-end justify-between gap-3 px-3 pb-3 pt-5">
+            <div><p class="font-serif text-xl text-[#503c2c]">{{ product.name }}</p><p class="mt-1 text-xs text-[#988474]">{{ product.category }}</p></div>
+            <p class="whitespace-nowrap text-xs font-semibold text-[#8d624d]">{{ product.price }}</p>
+          </div>
+        </article>
+      }
+    </div>
+    <p class="mt-8 text-center text-xs text-[#887565]">Every design can be personalised. Prices may vary with your custom details.</p>
+  </div>
+</section>
+
+<!-- Story -->
+<section id="story" class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:py-28">
+  <div class="relative mx-auto max-w-lg">
+    <div class="absolute -left-5 -top-5 h-full w-full rounded-[2rem] border border-[#cdb49e]"></div>
+    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1100&q=85" alt="Handmade art and creative materials" class="relative h-[400px] w-full rounded-[2rem] object-cover sm:h-[500px]" />
+    <span class="absolute -bottom-5 -right-3 rounded-full bg-[#a66d58] px-6 py-5 font-serif text-lg italic text-white shadow-lg">Made with love ♡</span>
+  </div>
+  <div>
+    <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#ad725d]">The heart behind Shivi</p>
+    <h2 class="mt-4 font-serif text-4xl leading-tight text-[#493629] sm:text-5xl">Not just handmade.<br /><span class="italic text-[#ad725d]">Handpicked for you.</span></h2>
+    <p class="mt-7 text-sm leading-8 text-[#796858]">We believe the most beautiful things are the ones made with intention. Shivi brings together creativity, craft, and your personal ideas to create pieces that feel special.</p>
+    <p class="mt-4 text-sm leading-8 text-[#796858]">Whether it’s a tiny floral detail, a customised outfit, or a gift for someone you love, we make room for your imagination in every creation.</p>
+    <a href="#contact" class="mt-8 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#755640]">A little more about us <span class="text-lg">→</span></a>
+  </div>
+</section>
+
+<!-- Custom order CTA -->
+<section id="custom" class="relative overflow-hidden bg-[#66513d] px-5 py-20 text-center text-[#fffaf1] sm:px-8 lg:py-24">
+  <span class="absolute -left-10 -top-20 font-serif text-[15rem] italic text-white/[0.04]">S</span>
+  <span class="absolute -bottom-28 -right-8 font-serif text-[17rem] italic text-white/[0.04]">✿</span>
+  <div class="relative mx-auto max-w-2xl">
+    <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#e0b9a5]">Have an idea in mind?</p>
+    <h2 class="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Let’s make something<br /><span class="italic text-[#e7c5b1]">that feels like you.</span></h2>
+    <p class="mx-auto mt-6 max-w-lg text-sm leading-7 text-[#e7dbce]">Tell us what you’re imagining. We’ll work with you on the colours, details, and finishing touches to bring it to life.</p>
+    <a href="#contact" class="mt-8 inline-flex rounded-full bg-[#fffaf1] px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#5d4735] transition hover:-translate-y-1 hover:bg-[#f0dfce]">Start a custom order ↗</a>
+  </div>
+</section>
+
+<!-- Contact / footer -->
+<footer id="contact" class="bg-[#fbf7ef]">
+  <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.3fr_1fr_1fr]">
+    <div>
+      <img src="assets/shivi-logo.png" alt="Shivi logo" class="h-24 w-24 object-contain" />
+      <p class="mt-3 max-w-xs text-sm leading-7 text-[#806e5e]">Thoughtful handmade creations, customised with care and made to tell your story.</p>
+    </div>
+    <div>
+      <h3 class="font-serif text-xl text-[#503c2c]">Explore</h3>
+      <div class="mt-4 flex flex-col gap-3 text-xs text-[#806e5e]">
+        <a href="#collections" class="hover:text-[#ad725d]">Our collections</a>
+        <a href="#story" class="hover:text-[#ad725d]">Our story</a>
+        <a href="#custom" class="hover:text-[#ad725d]">Custom orders</a>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-serif text-xl text-[#503c2c]">Say hello</h3>
+      <p class="mt-4 text-xs leading-6 text-[#806e5e]">Have a question or an idea to share?<br />We’d love to hear from you.</p>
+      <!-- Replace # with your Instagram profile or WhatsApp link -->
+      <a href="#" class="mt-4 inline-flex rounded-full border border-[#cdb49e] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#755640] hover:bg-[#f1e9dd]">Instagram / WhatsApp ↗</a>
+    </div>
+  </div>
+  <div class="border-t border-[#e9dfd1] px-5 py-5 text-center text-[9px] uppercase tracking-[0.2em] text-[#a18e7e]">
+    © {{ currentYear }} Shivi · Made with care, stitched with love
+  </div>
+</footer>
+</main>
