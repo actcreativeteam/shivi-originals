@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular
-        run: npx ng build --configuration production --base-href /actcreativeteam/shivi-originals/
+        run: npx ng build --configuration production --base-href /shivi-originals/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
